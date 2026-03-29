@@ -4,7 +4,36 @@ A running summary of work done each session. Updated before every push.
 
 ---
 
-## 2026-03-28 / 2026-03-29 — Initial Build
+## 2026-03-29 — Session 2
+
+Picked up from the previous session. Completed the ui-library form showcase, scaffolded the ui-content-blocks project, built and made the first content block responsive, set up GitHub, and pushed everything.
+
+**ui-library**
+- Wired all 5 remaining form components (`FormLogIn`, `FormForgotPassword`, `FormNewsletter`, `FormContact`, `FormLeadSignup`) and 2 new primitives (`Textarea`, `Select`) into the dev sandbox
+- Added Barlow Condensed to the Google Fonts link (needed for `FormLeadSignup` heading)
+- Updated sidebar nav to include all new sections
+- Added `submitLabel` and `className` props to `FormLeadSignup` to support override from content blocks
+
+**ui-content-blocks** *(new project)*
+- Scaffolded Vite + React 19 + TypeScript + Tailwind v3
+- Vite alias `@ui` → `../ui-library/src` — imports library components without a build step
+- Tailwind content glob includes ui-library source so all token classes resolve
+- Collapsible siderail: `w-52` expanded ↔ `w-10` collapsed, animated with CSS transition, main content padding adjusts in sync
+
+**HeroSection block** (Figma node `37:340`)
+- Blue brand background with CSS-masked NLU watermark (hidden below `lg`)
+- NLU logo header, heading + body copy, 4-item feature list with check icons
+- `FormLeadSignup` at 486px with custom "Find your next step forward →" CTA
+- Fully responsive across 4 breakpoints: mobile (36px heading, stacked) → sm → lg (two-column) → xl (Figma spec, 64px heading, 120px padding)
+
+**Infrastructure**
+- Installed `gh` CLI, authenticated with GitHub
+- Created repo [parlovalen/Claude-and-Figma](https://github.com/parlovalen/Claude-and-Figma)
+- Initial push of all three projects + this worklog
+
+---
+
+## 2026-03-28 — Session 1 — Initial Build
 
 ### figma-mcp-test
 - Wired up Vite + React + TypeScript on an existing plain HTML project
